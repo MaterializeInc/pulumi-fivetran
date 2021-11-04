@@ -1,0 +1,4 @@
+bin
+sdk
+cmd/pulumi-resource-fivetran/Pulumi.yaml
+cmd/pulumi-resource-fivetran/schema.json
