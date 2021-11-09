@@ -16,5 +16,5 @@ python-sdk: bin/pulumi-tfgen-fivetran
 	bin/pulumi-tfgen-fivetran $(VERSION) python
 	cp README.md sdk/python/
 	cd sdk/python/ && \
-		sed -i.bak -e "s/\$${VERSION}/$(VERSION)/g" -e "s/\$${PLUGIN_VERSION}/$(VERSION)/g" setup.py && \
+		sed -i.bak -e "s/0\.0\.0/$(VERSION)/g" setup.py && \
 		rm setup.py.bak
