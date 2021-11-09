@@ -157,6 +157,8 @@ github.com/aws/aws-sdk-go v1.30.27/go.mod h1:5zCpMtNQVjRREroY7sYe8lOMRSxkhG6MZve
 github.com/aws/aws-sdk-go v1.37.0/go.mod h1:hcU610XS61/+aQV88ixoOzUoG7v3b31pl2zKMmprdro=
 github.com/aws/aws-sdk-go v1.38.35 h1:7AlAO0FC+8nFjxiGKEmq0QLpiA8/XFr6eIxgRTwkdTg=
 github.com/aws/aws-sdk-go v1.38.35/go.mod h1:hcU610XS61/+aQV88ixoOzUoG7v3b31pl2zKMmprdro=
+github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211109201558-20eeccbb6d7a h1:+XwUXD9qKvYIURfppSJkR7ZXs5ijYbUDB+tjKLuWQUE=
+github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211109201558-20eeccbb6d7a/go.mod h1:cLiU8cAWLk55UzT3bw0UmImp79nnPaAkJ30S4XzvSgQ=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=
 github.com/beorn7/perks v1.0.0/go.mod h1:KWe93zE9D1o94FZ5RNwFwVgaQK1VOXiVxmqh+CedLV8=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
@@ -239,8 +241,6 @@ github.com/fatih/color v1.9.0/go.mod h1:eQcE1qtQxscV5RaZvpXrrb8Drkc3/DdQ+uUYCNjL
 github.com/fatih/structs v1.1.0/go.mod h1:9NiDSp5zOcgEDl+j00MP/WkGVPOlPRLejGD8Ga6PJ7M=
 github.com/fivetran/go-fivetran v0.2.2 h1:NuZHjGZr8qlhQen0u78/DTiVDm0J1zkBsj+QnTZ4EHs=
 github.com/fivetran/go-fivetran v0.2.2/go.mod h1:Y0JRpTVn8sYRFcG5htzp9HhqfRE381QlHOHjVam+iyI=
-github.com/fivetran/terraform-provider-fivetran v0.1.2 h1:0EQYuoDMtA2+/5oIk1DAkg5K9JGdECjCKDYZO2WYl0E=
-github.com/fivetran/terraform-provider-fivetran v0.1.2/go.mod h1:u6lSkIY2TD7mHJbTnU5pVO9Rv18KlVPOEfvKhkl9x8Y=
 github.com/flynn/go-shlex v0.0.0-20150515145356-3f9db97f8568/go.mod h1:xEzjJPgXI435gkrCt3MPfRiAkVrwSbHsst4LCFVfpJc=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible h1:TcekIExNqud5crz4xD2pavyTgWiPvpYe4Xau31I0PRk=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible/go.mod h1:pbq4aXjuKjdthFRnoDwaVPLA+WlJuPGy+QneDUgJi2k=
