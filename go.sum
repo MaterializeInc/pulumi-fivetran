@@ -157,8 +157,8 @@ github.com/aws/aws-sdk-go v1.30.27/go.mod h1:5zCpMtNQVjRREroY7sYe8lOMRSxkhG6MZve
 github.com/aws/aws-sdk-go v1.37.0/go.mod h1:hcU610XS61/+aQV88ixoOzUoG7v3b31pl2zKMmprdro=
 github.com/aws/aws-sdk-go v1.38.35 h1:7AlAO0FC+8nFjxiGKEmq0QLpiA8/XFr6eIxgRTwkdTg=
 github.com/aws/aws-sdk-go v1.38.35/go.mod h1:hcU610XS61/+aQV88ixoOzUoG7v3b31pl2zKMmprdro=
-github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211109215722-69ad9bd0b286 h1:nDOVWXxOXpnaau2IVC61CUUMf0/3CDicevM1Ez376+Q=
-github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211109215722-69ad9bd0b286/go.mod h1:cLiU8cAWLk55UzT3bw0UmImp79nnPaAkJ30S4XzvSgQ=
+github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211110002236-a088b6152e1a h1:MLGoV1DGc8NK7HHI7QC8FmU7KxHvoSwQUSysLzbFcno=
+github.com/benesch/terraform-provider-fivetran v0.1.3-0.20211110002236-a088b6152e1a/go.mod h1:cLiU8cAWLk55UzT3bw0UmImp79nnPaAkJ30S4XzvSgQ=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=
 github.com/beorn7/perks v1.0.0/go.mod h1:KWe93zE9D1o94FZ5RNwFwVgaQK1VOXiVxmqh+CedLV8=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
