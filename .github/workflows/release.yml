@@ -13,9 +13,9 @@ jobs:
           fetch-depth: 0
       # https://github.com/actions/checkout/issues/290
       - run: git fetch --force --tags
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v4
         with:
-          go-version: 1.18
+          go-version: "1.20"
       - run: make schema
       - uses: goreleaser/goreleaser-action@v2
         with:
