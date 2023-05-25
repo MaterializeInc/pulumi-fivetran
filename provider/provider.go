@@ -75,6 +75,7 @@ func Provider(version string) tfbridge.ProviderInfo {
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"fivetran_user":        {Tok: makeResource(mainMod, "User")},
 			"fivetran_group":       {Tok: makeResource(mainMod, "Group")},
+			"fivetran_group_users": {Tok: makeResource(mainMod, "GroupUsers")},
 			"fivetran_destination": {Tok: makeResource(mainMod, "Destination")},
 			"fivetran_connector": {
 				Tok: makeResource(mainMod, "Connector"),
@@ -90,6 +91,7 @@ func Provider(version string) tfbridge.ProviderInfo {
 					},
 				},
 			},
+			"fivetran_connector_schema_config": {Tok: makeResource(mainMod, "ConnectorSchemaConfig")},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			"fivetran_user":                {Tok: makeDataSource(mainMod, "getUser")},
