@@ -91,6 +91,7 @@ func Provider(version string) tfbridge.ProviderInfo {
 					},
 				},
 			},
+			"fivetran_connector_schedule":  {Tok: makeResource(mainMod, "ConnectorSchedule")},
 			"fivetran_connector_schema_config": {Tok: makeResource(mainMod, "ConnectorSchemaConfig")},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
