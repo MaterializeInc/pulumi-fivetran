@@ -3,7 +3,7 @@ module github.com/benesch/pulumi-fivetran
 go 1.16
 
 require (
-	github.com/benesch/terraform-provider-fivetran v0.1.3-0.20220822140138-40ecdacb1b3a
+	github.com/benesch/terraform-provider-fivetran v0.1.3-0.20230525195745-365bf4073023
 	github.com/hashicorp/terraform-plugin-sdk v1.17.2 // indirect
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.47.0
 	github.com/pulumi/pulumi/pkg/v3 v3.68.0 // indirect
