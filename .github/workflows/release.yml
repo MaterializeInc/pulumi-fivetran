@@ -8,26 +8,31 @@ jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      # https://github.com/actions/checkout/issues/290
-      - run: git fetch --force --tags
-      - uses: actions/setup-go@v4
+      - uses: actions/setup-go@v7
         with:
-          go-version: "1.20"
+          go-version-file: go.mod
+      # tfgen generates the SDKs with `pulumi package gen-sdk`.
+      - uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
+        with:
+          pulumi-version: 3.244.0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
       - run: make schema
-      - uses: goreleaser/goreleaser-action@v2
+      - uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7.2.3
         with:
           distribution: goreleaser
-          version: latest
-          args: release --rm-dist
+          version: "~> v2"
+          args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: make python-sdk
-      - run: python setup.py build sdist
+      - run: pip install build && python -m build --sdist
         working-directory: sdk/python
-      - uses: pypa/gh-action-pypi-publish@master
+      - uses: pypa/gh-action-pypi-publish@a892a5a61159132606e93a2fa6f4358831b04d26 # v1.14.2
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-          packages_dir: sdk/python/dist/
+          packages-dir: sdk/python/dist/
