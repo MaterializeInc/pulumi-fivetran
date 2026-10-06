@@ -1,17 +1,17 @@
 VERSION ?= $(patsubst v%,%,$(shell git describe))
 
-bin/pulumi-resource-fivetran: cmd/pulumi-resource-fivetran/schema.json
-	go build -o bin/pulumi-resource-fivetran ./cmd/pulumi-resource-fivetran
+bin/pulumi-resource-fivetran: provider/cmd/pulumi-resource-fivetran/schema.json
+	go build -o bin/pulumi-resource-fivetran ./provider/cmd/pulumi-resource-fivetran
 
-bin/pulumi-tfgen-fivetran: cmd/pulumi-tfgen-fivetran/*.go go.sum provider/*.go
-	go build -o bin/pulumi-tfgen-fivetran ./cmd/pulumi-tfgen-fivetran
+bin/pulumi-tfgen-fivetran: provider/cmd/pulumi-tfgen-fivetran/*.go go.sum provider/*.go
+	go build -o bin/pulumi-tfgen-fivetran ./provider/cmd/pulumi-tfgen-fivetran
 
-cmd/pulumi-resource-fivetran/schema.json: bin/pulumi-tfgen-fivetran
-	bin/pulumi-tfgen-fivetran $(VERSION) schema --out ./cmd/pulumi-resource-fivetran
+provider/cmd/pulumi-resource-fivetran/schema.json: bin/pulumi-tfgen-fivetran
+	bin/pulumi-tfgen-fivetran $(VERSION) schema --out ./provider/cmd/pulumi-resource-fivetran
 
-schema: cmd/pulumi-resource-fivetran/schema.json
+schema: provider/cmd/pulumi-resource-fivetran/schema.json
 
-python-sdk: bin/pulumi-tfgen-fivetran
+python-sdk: provider/cmd/pulumi-resource-fivetran/schema.json
 	rm -rf sdk
 	bin/pulumi-tfgen-fivetran $(VERSION) python
 	cp README.md sdk/python/

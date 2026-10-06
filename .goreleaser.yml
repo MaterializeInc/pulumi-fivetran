@@ -1,3 +1,4 @@
+version: 2
 archives:
   - id: archive
     name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
@@ -9,9 +10,9 @@ builds:
       - darwin
       - windows
       - linux
-    main: ./cmd/pulumi-resource-fivetran
+    main: ./provider/cmd/pulumi-resource-fivetran
     binary: pulumi-resource-fivetran
     ldflags:
       - -X main.version={{.Tag}}
 changelog:
-  skip: true
+  disable: true
