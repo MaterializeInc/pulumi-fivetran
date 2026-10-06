@@ -68,9 +68,9 @@ func Provider(version string) tfbridge.ProviderInfo {
 		Description:       "A Pulumi package for creating and managing Fivetran resources.",
 		Keywords:          []string{"pulumi", "fivetran"},
 		License:           "Apache-2.0",
-		Homepage:          "https://github.com/benesch/pulumi-fivetran",
-		Repository:        "https://github.com/benesch/pulumi-fivetran",
-		PluginDownloadURL: fmt.Sprintf("https://github.com/benesch/pulumi-fivetran/releases/download/v%s/", version),
+		Homepage:          "https://github.com/MaterializeInc/pulumi-fivetran",
+		Repository:        "https://github.com/MaterializeInc/pulumi-fivetran",
+		PluginDownloadURL: fmt.Sprintf("https://github.com/MaterializeInc/pulumi-fivetran/releases/download/v%s/", version),
 
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"fivetran_user":        {Tok: makeResource(mainMod, "User")},
